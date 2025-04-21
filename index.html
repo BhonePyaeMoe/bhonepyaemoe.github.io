@@ -11,7 +11,7 @@
   <title>Bhone Pyae Moe</title>
 </head>
 
-<body class="bg-black">
+<body class="bg-gray-900">
 
   <div class="">
     <nav>
@@ -46,9 +46,8 @@
       <div class="flex flex-col items-start justify-center gap-2 ml-10 text-white">
 
         <h1 class="text-5xl font-bold tracking-widest writing">FULL-STACK SOFTWARE DEVELOPER</h1>
-        <h1 class="text-5xl font-bold tracking-wide"></h1>
         <div class="max-w-4xl mt-4">
-          <p class="text-lg">
+          <p class="text-lg appear">
             I'm Bhone Pyae Moe, a passionate software developer. I love creating innovative solutions
             that make a difference. I believe in the power of technology to transform lives and I'm excited to be a part
             of that journey.</p>
@@ -66,13 +65,13 @@
 
   </div>
 
-  <div class="flex items-center justify-center h-full pt-30">
+  <div class="flex items-center justify-center h-full">
 
-    <div class="w-full">
+    <div class="w-full enjoy">
 
       <div class="flex items-start justify-center h-50 pt-10">
 
-        <h2 class="pop text-5xl font-bold text-center text-white">My Projects</h2>
+        <h2 class="text-5xl font-bold text-center text-white">My Projects</h2>
 
       </div>
 
@@ -82,7 +81,7 @@
         <div class="rotating-container">
 
           <!-- Project 1 -->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project1.jpg" class="object-cover w-full">
 
             <div
@@ -95,7 +94,7 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project2.jpg" class="object-cover w-full">
 
             <div
@@ -108,7 +107,7 @@
 
 
           <!-- Project 3 -->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project3.jpg" class="object-cover w-full">
 
             <div
@@ -120,7 +119,7 @@
           </div>
 
           <!-- Project 4-->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project4.jpg" class="object-cover w-full">
 
             <div
@@ -132,7 +131,7 @@
           </div>
 
           <!-- Project 1 -->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project1.jpg" class="object-cover w-full">
 
             <div
@@ -145,7 +144,7 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project2.jpg" class="object-cover w-full">
 
             <div
@@ -157,19 +156,19 @@
           </div>
 
           <!-- Project 3 -->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project3.jpg" class="object-cover w-full">
 
             <div
               class="absolute top-0 left-0 p-5 w-full h-full bg-black opacity-0 flex flex-col text-white group-hover:opacity-80 transition duration-300 ease-in-out">
-              <h3 class="text-2xl font-bold pt-10 pb-7 text-center">Tun Foundation Library</h3>
-              <p class="text-lg text-center">An Application about Borrowing and Returning Management System of a Library
+              <h3 class="text-2xl font-bold pt-10 pb-7 text-center">Camping Paradise</h3>
+              <p class="text-lg text-center">An Application about Booking Management System of a Camping Website
               </p>
             </div>
           </div>
 
           <!-- Project 4 -->
-          <div class="group rotating-item bg-gray-950 position-relative">
+          <div class="drop group bg-gray-950 position-relative">
             <img src="components/Project4.jpg" class="object-cover w-full">
 
             <div
@@ -181,12 +180,6 @@
           </div>
         </div>
 
-      </div>
-
-      <div class="flex items-center justify-center h-50 pt-4">
-        <a class="border border-white border-2 rounded-xl text-white hover:bg-white hover:text-black transition duration-300 ease-in-out py-2 px-7"
-          href="https://github.com/BhonePyaeMoe"> See More
-        </a>
       </div>
 
     </div>
@@ -201,6 +194,44 @@
 
   </div>
 
+  <script>
+    // filepath: c:\Study\Website_Pratice\Portfolio\index.html
+    document.addEventListener("DOMContentLoaded", () => {
+      const enjoyElement = document.querySelector(".enjoy");
+
+      // Add the hidden class initially
+      enjoyElement.classList.add("hidden");
+
+      // Function to check if the element's top is within the upper 20% of the viewport
+      const isInViewport = (element) => {
+        const rect = element.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        return rect.top <= viewportHeight * 0.2 && rect.top >= 0;
+      };
+
+      // Event listener for scrolling
+      const handleScroll = () => {
+        if (isInViewport(enjoyElement)) {
+          enjoyElement.classList.add("visible");
+          enjoyElement.classList.remove("hidden");
+
+          const rotatingItems = document.querySelectorAll(".drop");
+          setTimeout(() => {
+            rotatingItems.forEach((item) => item.classList.add("rotating-item"));
+          }, 2000);
+
+          // Remove the scroll listener once the element is visible
+          window.removeEventListener("scroll", handleScroll);
+        }
+      };
+
+      // Attach the scroll event listener
+      window.addEventListener("scroll", handleScroll);
+    });
+  </script>
+
 </body>
+
+
 
 </html>
