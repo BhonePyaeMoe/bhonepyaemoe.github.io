@@ -7,151 +7,103 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="shortcut icon" href="components/Profile.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <title>Bhone Pyae Moe</title>
 </head>
 
-<style>
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  .writing::after {
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    right: 5px;
-    width: 25px;
-    height: 10%;
-    background-color: white;
-    animation: blink 1s infinite step-end;
-  }
-
-  @keyframes blink {
-
-    0%,
-    100% {
-      background-color: transparent;
-    }
-
-    50% {
-      background-color: white;
-    }
-  }
-
-  .writing {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    width: 100%;
-    animation: writing 4s steps(28) 1s infinite alternate
-  }
-
-  @keyframes writing {
-    0% {
-      width: 0%;
-    }
-
-    5% {
-      width: 0%;
-    }
-
-    75% {
-      width: 100%;
-    }
-  }
-</style>
-
-
 <body class="bg-black">
 
-  <nav>
-    <ul class="flex justify-end items-center gap-6 p-6 text-white text-xl">
+  <div>
+    <nav>
+      <ul class="flex justify-end items-center gap-6 p-6 text-white text-xl">
 
-      <a class="mr-auto px-4" href="index.html">
-        Peter
-      </a>
+        <a class="mr-auto px-4" href="index.html">
+          Peter
+        </a>
 
-      <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
-        href="https://github.com/BhonePyaeMoe">
-        <i class="fa-brands fa-github p-3"></i>
+        <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
+          href="https://github.com/BhonePyaeMoe">
+          <i class="fa-brands fa-github p-3"></i>
 
-      </a>
+        </a>
 
 
-      <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
-        href="https://www.linkedin.com/in/bhone-pyae-moe-077199274/">
-        <i class="fa-brands fa-linkedin p-3"></i>
-      </a>
+        <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
+          href="https://www.linkedin.com/in/bhone-pyae-moe-077199274/">
+          <i class="fa-brands fa-linkedin p-3"></i>
+        </a>
 
-      <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
-        download="BhonePyaeMoe.pdf" href="components/BhonePyaeMoe(Resume).pdf">
-        <i class=" fa-solid fa-download p-3"></i>
-      </a>
+        <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
+          download="BhonePyaeMoe.pdf" href="components/BhonePyaeMoe(Resume).pdf">
+          <i class=" fa-solid fa-download p-3"></i>
+        </a>
 
-    </ul>
-  </nav>
+      </ul>
+    </nav>
 
-  <div class="flex items-center justify-start" style="height: calc(100vh - 96px);">
+    <div class="flex items-center justify-start" style="height: calc(100vh - 96px);">
 
-    <div class="flex flex-col items-start justify-center gap-2 ml-10 text-white">
+      <div class="flex flex-col items-start justify-center gap-2 ml-10 text-white">
 
-      <h1 class="text-5xl font-bold tracking-widest writing">FULL-STACK SOFTWARE DEVELOPER</h1>
-      <h1 class="text-5xl font-bold tracking-wide"></h1>
-      <div class="max-w-4xl mt-4">
-        <p class="text-lg">
-          I'm Bhone Pyae Moe, a passionate software developer. I love creating innovative solutions
-          that make a difference. My expertise lies in full-stack development, and I'm always eager to learn and grow in
-          this ever-evolving field. I believe in the power of technology to transform lives and I'm excited to be a part
-          of that journey.</p>
+        <h1 class="text-5xl font-bold tracking-widest writing">FULL-STACK SOFTWARE DEVELOPER</h1>
+        <h1 class="text-5xl font-bold tracking-wide"></h1>
+        <div class="max-w-4xl mt-4">
+          <p class="text-lg">
+            I'm Bhone Pyae Moe, a passionate software developer. I love creating innovative solutions
+            that make a difference. My expertise lies in full-stack development, and I'm always eager to learn and grow
+            in
+            this ever-evolving field. I believe in the power of technology to transform lives and I'm excited to be a
+            part
+            of that journey.</p>
+
+        </div>
+
+        <a href="mailto:bhonepyae.it@gmail.com" class=" bg-white text-black font-bold py-3 px-6 rounded-full mt-8 hover:cursor-pointer hover:bg-blue-500
+        hover:text-white transition duration-500 ease-in-out">
+          Let's Connect </a>
 
       </div>
 
-      <a href="mailto:bhonepyae.it@gmail.com" class=" bg-white text-black font-bold py-3 px-6 rounded-full mt-8 hover:cursor-pointer hover:bg-blue-500
-        hover:text-white transition duration-500 ease-in-out">
-        Let's Connect </a>
 
     </div>
-
 
   </div>
 
-  <div class="grid grid-rows-5 h-screen">
+  <div class="bg-red-400 h-100 w-full">
 
-    <div class="row-start-1 row-end-2 flex items-end justify-center">
+    <div class="flex items-center justify-center h-50">
 
-      <h1 class="text-5xl text-white font-bold"> About Me</h1>
+      <h2 class="text-5xl text-center text-white font-mono">My Projects</h2>
 
     </div>
 
-    <div class="row-start-3 row-end-6">
+    <div class="w-full flex items-center justify-center">
 
-      <div class="flex justify-center items-center gap-10 text-black">
+      <div class="flex flex-wrap max-w-8/10 bg-green-700">
 
-        <div class="flex items-center justify-end">
-          <img class="w-100 h-100 border-2 border-white rounded-full" src="components/Profile.jpg">
-        </div>
+        <div class="w-1/3 bg-red-200">
 
-        <div class="flex flex-col items-start justify-center w-1/2 h-1/2 gap-4 p-10 text-white">
+          <img src="components/Profile.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+          <h3 class="text-2xl text-center text-white font-mono">Project 1</h3>
+          <p class="text-center text-white">Description of Project 1</p>
 
-          <h2>I'm Bhone Pyae Moe, a passionate software developer.</h2>
-          <p>I'm a full-stack developer with a strong foundation in Python, JavaScript, and Java. I'm always eager to
-            learn and grow in this ever-evolving field.
-            I believe in the power of technology to transform lives and I'm excited to be a part of that journey.</p>
-          </p>
 
         </div>
 
+        <div class="w-1/3">
+          <img src="components/Profile.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+          <h3 class="text-2xl text-center text-white font-mono">Project 1</h3>
+          <p class="text-center text-white">Description of Project 1</p>
+        </div>
 
-
+        <div class="w-1/3 bg-red-300">
+          <img src="components/Profile.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+          <h3 class="text-2xl text-center text-white font-mono">Project 1</h3>
+          <p class="text-center text-white">Description of Project 1</p>
+        </div>
       </div>
 
     </div>
-
-
-
-
-
 
   </div>
 
