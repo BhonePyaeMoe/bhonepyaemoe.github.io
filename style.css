@@ -69,3 +69,28 @@
     transform: translateX(-417%);
   }
 }
+
+.pop {
+  animation: Pop 1.5s ease-in-out infinite;
+}
+
+@keyframes Pop {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1.2) rotate(-10deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
