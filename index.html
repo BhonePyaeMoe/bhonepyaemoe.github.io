@@ -2,59 +2,164 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="shortcut icon" href="components/Profile.jpg" type="image/x-icon">
+  <title>Bhone Pyae Moe</title>
 </head>
 
-<body>
+<style>
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .writing::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    width: 25px;
+    height: 10%;
+    background-color: white;
+    animation: blink 1s infinite step-end;
+  }
+
+  @keyframes blink {
+
+    0%,
+    100% {
+      background-color: transparent;
+    }
+
+    50% {
+      background-color: white;
+    }
+  }
+
+  .writing {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    animation: writing 4s steps(28) 1s infinite alternate
+  }
+
+  @keyframes writing {
+    0% {
+      width: 0%;
+    }
+
+    5% {
+      width: 0%;
+    }
+
+    75% {
+      width: 100%;
+    }
+  }
+</style>
+
+
+<body class="bg-black">
+
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <ul class="flex justify-end items-center gap-6 p-6 text-white text-xl">
+
+      <a class="mr-auto px-4" href="index.html">
+        Peter
+      </a>
+
+      <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
+        href="https://github.com/BhonePyaeMoe">
+        <i class="fa-brands fa-github p-3"></i>
+
+      </a>
+
+
+      <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
+        href="https://www.linkedin.com/in/bhone-pyae-moe-077199274/">
+        <i class="fa-brands fa-linkedin p-3"></i>
+      </a>
+
+      <a class="rounded-full border border-white border-2 hover:bg-white hover:text-black transition duration-300 ease-in-out"
+        download="BhonePyaeMoe.pdf" href="components/BhonePyaeMoe(Resume).pdf">
+        <i class=" fa-solid fa-download p-3"></i>
+      </a>
+
     </ul>
   </nav>
 
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi, I'm Bhone Pyae Moe, a web developer.</p>
-  </header>
+  <div class="flex items-center justify-start" style="height: calc(100vh - 96px);">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate web developer with experience in creating dynamic and
-      responsive websites.
-    </p>
-  </section>
+    <div class="flex flex-col items-start justify-center gap-2 ml-10 text-white">
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>Description of project 1.</p>
+      <h1 class="text-5xl font-bold tracking-widest writing">FULL-STACK SOFTWARE DEVELOPER</h1>
+      <h1 class="text-5xl font-bold tracking-wide"></h1>
+      <div class="max-w-4xl mt-4">
+        <p class="text-lg">
+          I'm Bhone Pyae Moe, a passionate software developer. I love creating innovative solutions
+          that make a difference. My expertise lies in full-stack development, and I'm always eager to learn and grow in
+          this ever-evolving field. I believe in the power of technology to transform lives and I'm excited to be a part
+          of that journey.</p>
+
+      </div>
+
+      <a href="mailto:bhonepyae.it@gmail.com" class=" bg-white text-black font-bold py-3 px-6 rounded-full mt-8 hover:cursor-pointer hover:bg-blue-500
+        hover:text-white transition duration-500 ease-in-out">
+        Let's Connect </a>
+
     </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>Description of project 2.</p>
+
+
+  </div>
+
+  <div class="grid grid-rows-5 h-screen">
+
+    <div class="row-start-1 row-end-2 flex items-end justify-center">
+
+      <h1 class="text-5xl text-white font-bold"> About Me</h1>
+
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email:
-      <a href="mailto:bhonepyaemoe@example.com">bhonepyaemoe@example.com</a>
-    </p>
-  </section>
+    <div class="row-start-3 row-end-6">
 
-  <footer>
-    <p>&copy; 2023 Bhone Pyae Moe. All rights reserved.</p>
-  </footer>
+      <div class="flex justify-center items-center gap-10 text-black">
 
-  <script src="script.js"></script>
+        <div class="flex items-center justify-end">
+          <img class="w-100 h-100 border-2 border-white rounded-full" src="components/Profile.jpg">
+        </div>
+
+        <div class="flex flex-col items-start justify-center w-1/2 h-1/2 gap-4 p-10 text-white">
+
+          <h2>I'm Bhone Pyae Moe, a passionate software developer.</h2>
+          <p>I'm a full-stack developer with a strong foundation in Python, JavaScript, and Java. I'm always eager to
+            learn and grow in this ever-evolving field.
+            I believe in the power of technology to transform lives and I'm excited to be a part of that journey.</p>
+          </p>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
 </body>
 
 </html>
