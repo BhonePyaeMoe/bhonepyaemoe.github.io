@@ -46,3 +46,26 @@
     width: 100%;
   }
 }
+
+.rotating-container {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.rotating-item {
+  flex: 0 0 auto;
+  width: 25%;
+  animation: rotate-horizontal 10s linear infinite;
+}
+
+@keyframes rotate-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-417%);
+  }
+}
