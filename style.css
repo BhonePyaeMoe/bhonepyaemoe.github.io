@@ -2,6 +2,15 @@
   display: none;
 }
 
+* {
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .writing::after {
   content: " ";
   display: inline-block;
@@ -22,14 +31,6 @@
   animation: writing 7s steps(28) infinite alternate;
 }
 
-.hidden {
-  opacity: 0;
-}
-
-.visible {
-  animation: fadeIn 1.5s forwards;
-}
-
 .rotating-container {
   display: flex;
   gap: 20px;
@@ -38,13 +39,10 @@
   width: 100%;
 }
 
-.rotating-item {
-  animation: rotate-horizontal 10s linear infinite;
-}
-
 .drop {
   flex: 0 0 auto;
   width: 25%;
+  animation: rotate-horizontal 10s linear infinite;
 }
 
 /* animation */
